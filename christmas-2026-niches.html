@@ -195,6 +195,24 @@
   }
   .warn b{font-weight:800}
 
+  /* sentence list */
+  .sentences{
+    list-style:none;counter-reset:s;margin:0;padding:0;
+    display:grid;grid-template-columns:1fr 1fr;gap:12px;
+  }
+  @media (max-width:860px){.sentences{grid-template-columns:1fr}}
+  .sentences li{
+    counter-increment:s;position:relative;
+    background:var(--paper);border:1px solid var(--line);border-radius:12px;
+    padding:15px 16px 15px 50px;font-size:14.2px;line-height:1.55;box-shadow:var(--shadow);
+  }
+  .sentences li::before{
+    content:counter(s,decimal-leading-zero);
+    position:absolute;left:14px;top:14px;
+    font-family:var(--serif);font-size:15px;color:var(--cran);letter-spacing:-.02em;
+  }
+  .sentences li b{display:block;margin-bottom:3px;font-size:14.6px;letter-spacing:-.01em}
+
   /* tables */
   .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:var(--shadow)}
   table{width:100%;border-collapse:collapse;min-width:660px}
@@ -295,6 +313,7 @@
     <a class="brand" href="/"><span class="mark">M</span> MerchFlux</a>
     <nav class="topnav">
       <a href="#verdict">Verdict</a>
+      <a href="#sentences">One sentence each</a>
       <a href="#niches">Niches</a>
       <a href="#catalog">Catalog</a>
       <a href="#calendar">Calendar</a>
@@ -370,6 +389,49 @@
       <p style="margin-top:12px;font-size:13.8px;color:var(--muted)">
         Everything else in this report is either a supporting play (pet breeds, hobbies, faith, funny persona) or a
         post-Christmas filler (New Year 2026) for accounts with open slots.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ================= TREND SENTENCES ================= -->
+<section id="sentences" class="tight">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker">One sentence each</p>
+        <h2>The trending niches, written out as sentences</h2>
+        <p class="sub">
+          If you only want the short version: each line below is a complete, sellable niche — who it is for, what the
+          design says, and why it is moving right now. Copy one, design it, upload it.
+        </p>
+      </div>
+    </div>
+
+    <ol class="sentences">
+      <li><b>Coquette bow Christmas.</b> Pink and red ribbons wrapped around trees, reindeer and Christmas lights, sold to women 16–34 who buy the aesthetic for themselves and for each other.</li>
+      <li><b>Occupation Christmas crews.</b> One specialty at a time — NICU nurse, ICU, L&amp;D, lineman, X-ray tech, dispatcher — because departments buy six at once and nobody has designed for their exact job yet.</li>
+      <li><b>Grandma name-drop.</b> Whatever her family calls her (Gigi, Mimi, Yaya, Nonna, Grammie, Mamaw) plus the year, for the adult child who needs a gift in the next ten days.</li>
+      <li><b>Family matching 2026.</b> One design, four to six units, one buyer — the 2026 numeral is the only thing separating a live search from a dead one.</li>
+      <li><b>Western and cowgirl Christmas.</b> Turquoise trees, leopard branches, cowboy boots and country puns for Southern and Midwestern women 25–55 who pay sweatshirt prices without checking.</li>
+      <li><b>Breed-specific pet Christmas.</b> A corgi, dachshund or golden retriever in a Santa hat, because "dog mom" is a war and "corgi mom" is an open field.</li>
+      <li><b>"In my Christmas era."</b> A caption, not a design — one typeface plus one motif (bow lights, chrome ornament, gingerbread) is the whole asset.</li>
+      <li><b>Faith and nativity Christmas.</b> Vintage hand-drawn nativity, "Wise Men Still Seek Him," a bow on a cross — a repeat-buying church audience the coquette wave completely ignores.</li>
+      <li><b>Hobby plus Christmas.</b> Pickleball, mahjong, fishing, bookish, crochet, birding — inside jokes for people whose hobby is their identity, sold at a premium because nobody else made one.</li>
+      <li><b>Persona-level funny Christmas.</b> Overstimulated mom, night shift, introvert "emotionally unavailable until January 2," Santa's little lifter — the gag-gift surge from 5 to 20 December.</li>
+      <li><b>New Year 2026 filler.</b> "New year, same great God," "Little Miss 2026," disco ball and bow — 20 minutes of design for the ten days after Christmas.</li>
+      <li><b>First-Christmas keepsakes.</b> Baby's first, first Christmas married, first Christmas in the new home — the highest-margin line of the season, and it belongs on Etsy or KDP, not Merch.</li>
+    </ol>
+
+    <div class="panel" style="margin-top:18px;border-left:4px solid var(--gold)">
+      <h3>How to use a sentence</h3>
+      <p style="margin-bottom:0">
+        A niche is not a word, it is a sentence: <b>who it is for + what the design says + why they buy it now</b>.
+        If you cannot fill all three in one line, it is not a niche yet — it is a category, and categories lose to
+        long-tail listings every December. The twelve lines above are already written in that shape; rewrite the
+        audience or the prop and you have a new variant.
       </p>
     </div>
   </div>
