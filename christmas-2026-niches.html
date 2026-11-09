@@ -213,6 +213,48 @@
   }
   .sentences li b{display:block;margin-bottom:3px;font-size:14.6px;letter-spacing:-.01em}
 
+  /* design + prompt cards */
+  .dsgs{display:grid;gap:16px}
+  .dsg{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:20px 22px 22px;scroll-margin-top:80px;
+  }
+  .dsg-h{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .dsg-no{
+    font-family:var(--serif);font-size:22px;color:var(--cran);letter-spacing:-.03em;
+    min-width:30px;
+  }
+  .dsg-h h3{margin:0;font-size:19px;letter-spacing:-.015em;line-height:1.25}
+  .dsg-h .b{margin-left:auto}
+  .dsg-s{margin:12px 0 14px;font-size:14.4px;color:#3a3b33;font-style:italic}
+  .dsg-g{display:grid;grid-template-columns:1fr 1.05fr;gap:18px;align-items:start}
+  @media (max-width:900px){.dsg-g{grid-template-columns:1fr}}
+  .dsg-g h4{
+    margin:0 0 5px;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+    color:var(--muted);font-weight:800;
+  }
+  .dsg-g h4:not(:first-child){margin-top:14px}
+  .dsg-g p{margin:0;font-size:14px;line-height:1.58}
+  .dsg-t{
+    font-family:var(--mono);font-size:12.3px;line-height:1.55;background:#f6f1e6;
+    border:1px solid rgba(20,21,15,.09);border-radius:8px;padding:9px 11px;color:#2a2b24;
+  }
+  .dsg-p{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .dsg-p h4{
+    margin:0;display:flex;align-items:center;gap:10px;padding:9px 12px;
+    background:#f6f1e6;border-bottom:1px solid var(--line);
+  }
+  .dsg-p h4 button{
+    margin-left:auto;cursor:pointer;font:inherit;font-size:11.5px;font-weight:750;
+    padding:5px 10px;border-radius:7px;border:1px solid rgba(20,21,15,.16);background:#fff;color:var(--ink);
+    letter-spacing:0;text-transform:none;
+  }
+  .dsg-p h4 button:hover{border-color:var(--ever);color:var(--ever)}
+  .dsg-p pre{
+    margin:0;padding:14px;font-family:var(--mono);font-size:11.9px;line-height:1.62;
+    white-space:pre-wrap;word-break:break-word;color:#22231c;background:#fff;
+  }
+
   /* tables */
   .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:var(--shadow)}
   table{width:100%;border-collapse:collapse;min-width:660px}
@@ -314,6 +356,7 @@
     <nav class="topnav">
       <a href="#verdict">Verdict</a>
       <a href="#sentences">One sentence each</a>
+      <a href="#designs">Designs + prompts</a>
       <a href="#niches">Niches</a>
       <a href="#catalog">Catalog</a>
       <a href="#calendar">Calendar</a>
@@ -434,6 +477,283 @@
         audience or the prop and you have a new variant.
       </p>
     </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<!-- ================= DESIGNS + PROMPTS ================= -->
+<section id="designs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker">Design + prompt</p>
+        <h2>The best-selling design for each niche — and the exact prompt</h2>
+        <p class="sub">
+          One hero design per niche: the composition most likely to sell in the next six weeks, why it works,
+          the listing title, and a copy-paste prompt tuned for Midjourney, DALL·E, Ideogram or Firefly.
+        </p>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-bottom:20px;border-left:4px solid var(--ever)">
+      <h3>How to run these prompts</h3>
+      <ul style="margin-bottom:0">
+        <li><b>Append the format.</b> Add <span class="phrase">--ar 4:5</span> (Midjourney) or "vertical 4:5" — Merch artwork wants a tall canvas.</li>
+        <li><b>Generate the art, set the type manually if it garbles.</b> Any model will still mangle long phrases. Ideogram and DALL·E 3 handle short text; for anything longer, generate the illustration and set the lettering in Canva or Illustrator.</li>
+        <li><b>Ask for flat vector, never a mockup.</b> "On a white background, no shirt, no shadow" is the difference between a usable print file and a photo of a shirt you cannot upload.</li>
+        <li><b>Check the output at 200 px.</b> If the design is unreadable at thumbnail size, it will not convert on Amazon no matter how good it looks at full size.</li>
+        <li><b>Never trace AI output into a trademark.</b> The prompt is clean; adding a character or a lyric to it is what gets you pulled.</li>
+      </ul>
+    </div>
+
+    <div class="dsgs">
+
+      <!-- D1 -->
+      <article class="dsg" id="d1">
+        <div class="dsg-h"><span class="dsg-no">01</span><h3>Coquette bow Christmas</h3><span class="b vel">highest velocity</span></div>
+        <p class="dsg-s">Pink and red ribbons wrapped around trees, reindeer and Christmas lights, sold to women 16–34 who buy the aesthetic for themselves and for each other.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>One oversized <strong>candy-cane striped bow</strong>, tied dead centre, with holly and three round ornaments tucked into the loops, and "MERRY CHRISTMAS" in a rounded retro serif arched inside the lower loop. Cream ground, blush and candy red, faux-glitter accents.</p>
+            <h4>Why it sells</h4>
+            <p>The bow silhouette is legible at 200 px, and the gingham/candy-stripe ground makes the thumbnail read as a different listing in a wall of script fonts. It works on cream, blush and black equally well — three colorways, one asset.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Coquette Christmas Bow Sweatshirt, Pink Bow Xmas Tree Tee, Girly Retro Holiday Gift for Her, Cute Merry Christmas Shirt for Women Teen Girls</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p1">Copy</button></h4>
+            <pre id="p1">Flat vector holiday graphics for a sweatshirt print, single centered composition. One oversized bow made of candy-cane striped ribbon tied in the center, blush pink and candy red with faux glitter highlights, small holly leaves and three round ornaments tucked into the loops. Rounded retro serif lettering reading MERRY CHRISTMAS arched inside the lower loop. Limited palette: cream #F7E8E4, blush #E27B90, candy red #C8172F, forest #14513A, gold #C8A34A. Thick clean outlines, maximum 4 colors, isolated on pure white background, print-ready, no mockup, no fabric texture, no drop shadow, no photorealism, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D2 -->
+      <article class="dsg" id="d2">
+        <div class="dsg-h"><span class="dsg-no">02</span><h3>Occupation Christmas crews</h3><span class="b vel">best margin</span></div>
+        <p class="dsg-s">One specialty at a time — NICU nurse, ICU, L&amp;D, lineman, X-ray tech, dispatcher — because departments buy six at once.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>A <strong>chenille-patch</strong> graphic: stethoscope bent into a round wreath with holly and berries, small varsity banner reading "MERRY SHIFTMAS". Faux embroidery — visible thread strokes and a stitched patch border. It looks like a $40 embroidered sweatshirt while costing you one flat PNG.</p>
+            <h4>Why it sells</h4>
+            <p>Patch style reads as "premium gift" and it photographs beautifully on a crewneck. Swap the instrument (stethoscope, wrench, tow hook, badge) and the banner word, and the same composition covers forty occupations.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Merry Shiftmas NICU Nurse Christmas Sweatshirt, Funny Holiday Crew Gift for NICU Nurse, Xmas Gift for Coworker Nurse Week</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p2">Copy</button></h4>
+            <pre id="p2">Flat vector chenille patch style graphic. A stethoscope bent into a round Christmas wreath, holly leaves and two red berries at the top, a small banner across the bottom reading MERRY SHIFTMAS in stitched varsity letters. Faux embroidery texture with visible thread strokes and a subtle stitched patch border, embroidered patch look, clean edges. Palette: forest green #14513A, cream, antique gold, one red accent. Centered, isolated on pure white, print-ready, bold, high contrast, no mockup, no photo, no drop shadow, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D3 -->
+      <article class="dsg" id="d3">
+        <div class="dsg-h"><span class="dsg-no">03</span><h3>Grandma name-drop</h3><span class="b vel">gift intent</span></div>
+        <p class="dsg-s">Whatever her family calls her — Gigi, Mimi, Yaya, Nonna, Grammie, Mamaw — plus the year, for the adult child who needs a gift in ten days.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>A <strong>chunky retro script wordmark</strong>: "GIGI" in cream with a thin gold outline, tiny pink bows above the i's, "EST. 2026" in small sans caps beneath, three minimal snowflakes trailing right. Optional slim blush ring behind it.</p>
+            <h4>Why it sells</h4>
+            <p>It is a nameplate, not a joke — grandmas buy it for themselves and adult children buy it as a gift twice. One hour of work produces twelve variants, and the variant <em>is</em> the keyword.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Gigi Christmas Sweatshirt, Gigi Est 2026 Gift for Grandma, Cute Holiday Gift from Grandkids, Christmas Gift for Gigi</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p3">Copy</button></h4>
+            <pre id="p3">Flat vector graphic for a women's sweatshirt, centered. The word GIGI in a chunky retro script with soft cream fill and a thin gold outline, a tiny pink bow above each i, EST. 2026 in small sans-serif capitals beneath, three minimal snowflakes trailing to the right. Optional slim blush circle behind the wordmark. Palette: cream, blush pink, antique gold, forest green. Bold clean outlines, 3 colors, simple and elegant, isolated on pure white background, print-ready, no mockup, no fabric texture, no glitter photoreal effects, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D4 -->
+      <article class="dsg" id="d4">
+        <div class="dsg-h"><span class="dsg-no">04</span><h3>Family matching 2026</h3><span class="b vel">highest order value</span></div>
+        <p class="dsg-s">One design, four to six units, one buyer — the 2026 numeral is the only thing separating a live search from a dead one.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>A <strong>retro 1970s badge</strong>: "FAMILY CHRISTMAS" in a heavy groovy serif inside an arched banner, "2026" as oversized numerals below, double outline and small stars, distressed screen-print texture.</p>
+            <h4>Why it sells</h4>
+            <p>The vintage badge is the only frame that survives a saturated keyword — it looks like a souvenir shirt, not a stock template. Distress masks small registration errors and makes a flat vector look printed.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Family Christmas 2026 Matching Shirt, Retro Vintage Family Christmas Squad Tee, Groovy Holiday Gift for Family of Five, Boy Mom Christmas</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p4">Copy</button></h4>
+            <pre id="p4">Retro 1970s vintage holiday graphic in a badge frame, flat vector. FAMILY CHRISTMAS in a heavy groovy serif inside an arched banner, 2026 as oversized numerals below it, small stars and a thin double outline around the badge. Distressed screen-print texture with slightly imperfect color registration. Palette: cream, brick red, forest green, mustard gold. Centered, isolated on pure white background, print-ready, bold, no mockup, no fabric texture, no photo, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D5 -->
+      <article class="dsg" id="d5">
+        <div class="dsg-h"><span class="dsg-no">05</span><h3>Western / cowgirl Christmas</h3><span class="b vel">rising</span></div>
+        <p class="dsg-s">Turquoise trees, leopard branches, cowboy boots and country puns for Southern and Midwestern women 25–55.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>A <strong>turquoise tree with leopard-print branches</strong>, chrome star and pink bow on top, a pair of cowboy boots at the base, "HOWDY CHRISTMAS" in western slab serif inside a rope border.</p>
+            <h4>Why it sells</h4>
+            <p>The desert palette (turquoise, cream, rust) reads "western" instantly at thumbnail size, and leopard-print branches give the eye something to land on that generic green trees don't have. Pays sweatshirt prices.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Western Christmas Sweatshirt, Howdy Christmas Turquoise Tree Cowgirl Crewneck, Leopard Cow Print Holiday Gift, Country Christmas Shirt for Women</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p5">Copy</button></h4>
+            <pre id="p5">Flat vector western Christmas graphic, centered. A turquoise Christmas tree made of leopard-print branches, a chrome star and small pink bow on top, a pair of cowboy boots at the base, rope-style border framing a banner that reads HOWDY CHRISTMAS in a western slab serif. Palette: turquoise #3FA9A0, cream, rust #A8542F, leopard tan, blush pink. Bold outlines, flat colors, no gradients, isolated on pure white background, print-ready, no mockup, no photo, no fabric texture, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D6 -->
+      <article class="dsg" id="d6">
+        <div class="dsg-h"><span class="dsg-no">06</span><h3>Breed-specific pet Christmas</h3><span class="b vel">low competition</span></div>
+        <p class="dsg-s">A corgi, dachshund or golden retriever in a Santa hat, because "dog mom" is a war and "corgi mom" is an open field.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>A <strong>stylized breed silhouette sitting inside an evergreen wreath</strong>, Santa hat on the head, three ornaments and snowflakes, "MERRY CORGIMAS" arched above in a friendly rounded serif.</p>
+            <h4>Why it sells</h4>
+            <p>Breed recognition is instant and emotional, and the wreath frame turns a bare silhouette into a finished gift. One silhouette file, forty breeds, forty low-competition keyword clusters.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Merry Corgimas Corgi Christmas Shirt, Corgi Mom Holiday Gift, Funny Dog Mom Xmas Tee, Corgi Lover Christmas Sweatshirt</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p6">Copy</button></h4>
+            <pre id="p6">Flat vector pet holiday graphic, centered. A stylized corgi in profile sitting inside a simple evergreen wreath, wearing a Santa hat, three round ornaments and a few snowflakes on the wreath. Lettering reading MERRY CORGIMAS arched above in a friendly rounded serif. Palette: forest green, cream, candy red, warm tan. Bold thick outlines, flat colors, cute but not childish, isolated on pure white background, print-ready, no mockup, no photo, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D7 -->
+      <article class="dsg" id="d7">
+        <div class="dsg-h"><span class="dsg-no">07</span><h3>"In my Christmas era"</h3><span class="b vel">fastest to make</span></div>
+        <p class="dsg-s">A caption, not a design — one typeface plus one motif is the whole asset.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>A <strong>bow made entirely of string Christmas lights</strong> — bulbs along a curved cord in red, mint and hot pink — with "IN MY MERRY ERA" in tall condensed retro type set inside the loop.</p>
+            <h4>Why it sells</h4>
+            <p>It is a caption people want to be photographed in, and the light-string bow is a motif the market has not exhausted yet. Forty minutes from idea to upload.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">In My Merry Era Christmas Sweatshirt, Christmas Lights Bow Shirt, Aesthetic Holiday Gift for Her, Cozy Christmas Era Tee for Teen Girls</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p7">Copy</button></h4>
+            <pre id="p7">Flat vector graphic, centered. A large bow formed entirely of string Christmas lights, with colored bulbs spaced along the curved cord, tied in the middle with two loops and two tails. Bold condensed retro lettering inside the loop reading IN MY MERRY ERA. Palette: cream, candy red, mint green, hot pink, gold. Thick clean outlines, flat color with no glow effects, isolated on pure white background, print-ready, no mockup, no photo, no fabric texture, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D8 -->
+      <article class="dsg" id="d8">
+        <div class="dsg-h"><span class="dsg-no">08</span><h3>Faith &amp; nativity Christmas</h3><span class="b vel">loyal repeat buyers</span></div>
+        <p class="dsg-s">Vintage hand-drawn nativity and "Wise Men Still Seek Him" — a repeat-buying church audience the coquette wave ignores.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>A <strong>circular woodcut line-art nativity</strong>: Mary, Joseph and the manger in minimal engraved lines, one large star above, evergreen sprigs at the base, the phrase arched around the ring in an engraved serif.</p>
+            <h4>Why it sells</h4>
+            <p>Engraved/woodcut style reads as an heirloom rather than a graphic tee, which is exactly what this buyer wants. It is also the most forgiving niche for a clean, well-typeset design — no fake trends needed.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Wise Men Still Seek Him Nativity Shirt, Christian Christmas Sweatshirt, Vintage Nativity Scene Tee, Faith Based Holiday Gift</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p8">Copy</button></h4>
+            <pre id="p8">Hand-drawn vintage woodcut-style Christmas graphic composed inside a circle. Minimal engraved line art of a nativity scene: Mary, Joseph and the manger, one large star above, small evergreen sprigs at the base. Text arched around the ring reading WISE MEN STILL SEEK HIM in an engraved serif. Palette: cream, olive green, burgundy, antique gold. Slightly textured ink lines, flat color, no gradients, isolated on pure white background, print-ready, no mockup, no photo, no extra text. --ar 1:1</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D9 -->
+      <article class="dsg" id="d9">
+        <div class="dsg-h"><span class="dsg-no">09</span><h3>Hobby + Christmas</h3><span class="b vel">under-served</span></div>
+        <p class="dsg-s">Pickleball, mahjong, fishing, bookish, crochet, birding — inside jokes for people whose hobby is their identity.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p><strong>Two crossed pickleball paddles behind a wreath</strong>, a candy cane through a perforated ball, banner reading "DINK AROUND THE CHRISTMAS TREE". The pun is the hero; the illustration is support.</p>
+            <h4>Why it sells</h4>
+            <p>Hobbyists are the least price-sensitive buyers in Q4, and almost nobody has made a <em>Christmas</em> version of their hobby. Swap paddles for a fishing rod, a mahjong tile or a stack of books and the frame still works.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Dink Around the Christmas Tree Pickleball Shirt, Funny Pickleball Christmas Gift, Pickleball Player Holiday Tee, Xmas Gift for Pickleball Lover</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p9">Copy</button></h4>
+            <pre id="p9">Flat vector pickleball Christmas graphic, centered. Two crossed pickleball paddles forming an X behind a round evergreen wreath, a candy cane threaded through a perforated pickleball, banner across the front reading DINK AROUND THE CHRISTMAS TREE in a bold retro sans serif. Palette: forest green, cream, candy red, paddle yellow-green. Thick retro outlines, flat colors, cheerful, isolated on pure white background, print-ready, no mockup, no photo, no fabric texture, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D10 -->
+      <article class="dsg" id="d10">
+        <div class="dsg-h"><span class="dsg-no">10</span><h3>Persona-level funny Christmas</h3><span class="b vel">peaks 5–20 Dec</span></div>
+        <p class="dsg-s">Overstimulated mom, night shift, introvert "emotionally unavailable until January 2" — the gag-gift surge.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p><strong>Distressed collegiate lettering</strong>, three stacked lines, offset shadow, one snowflake: "EMOTIONALLY UNAVAILABLE UNTIL JANUARY 2." Type-only, no illustration.</p>
+            <h4>Why it sells</h4>
+            <p>Type-only designs are the fastest to produce and the easiest to read at thumbnail size, and the joke sells the person, not the shirt. Late December buyers are buying gag gifts and they decide in two seconds.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Emotionally Unavailable Until January 2 Shirt, Funny Introvert Christmas Tee, Sarcastic Holiday Gift, Anti Social Christmas Sweatshirt</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p10">Copy</button></h4>
+            <pre id="p10">Distressed vintage typography graphic, type only, centered. The phrase EMOTIONALLY UNAVAILABLE UNTIL JANUARY 2 stacked in three lines in retro collegiate athletic block letters with a hard offset shadow, a small snowflake and a thin rule as accents. Single-color print look: bone white ink on deep forest green. Grunge distress texture, flat vector, isolated on pure white background, print-ready, no mockup, no photo, no fabric texture, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D11 -->
+      <article class="dsg" id="d11">
+        <div class="dsg-h"><span class="dsg-no">11</span><h3>New Year 2026 filler</h3><span class="b vel">26 Dec – 5 Jan</span></div>
+        <p class="dsg-s">"New year, same great God," "Little Miss 2026," disco ball and bow — 20 minutes of design for ten days of selling.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p><strong>Chrome balloon "2026"</strong> tied with a large blush bow, confetti stars, optional arched "NEW YEAR, SAME GREAT GOD" in small caps above.</p>
+            <h4>Why it sells</h4>
+            <p>Chrome numerals photograph like a product, and the bow ties it back into the coquette audience that is already shopping. It is a slot-filler: two designs per persona, no more.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Happy New Year 2026 Shirt, Chrome Balloon 2026 Tee, Pink Bow New Year Sweatshirt, New Year Same Great God Christian Gift</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p11">Copy</button></h4>
+            <pre id="p11">Flat vector New Year graphic, centered. The numerals 2026 in chrome balloon-letter style with soft reflective highlights, tied at the base with a large blush pink bow, small confetti stars scattered around. Palette: champagne gold, chrome silver, blush pink, cream. Bold clean outlines, flat vector shading, no photoreal reflections, isolated on pure white background, print-ready, no mockup, no photo, no fabric texture, no extra text. --ar 4:5</pre>
+          </div>
+        </div>
+      </article>
+
+      <!-- D12 -->
+      <article class="dsg" id="d12">
+        <div class="dsg-h"><span class="dsg-no">12</span><h3>First-Christmas keepsakes</h3><span class="b vel">highest margin</span></div>
+        <p class="dsg-s">Baby's first, first Christmas married, first Christmas in the new home — the highest-margin line of the season, and it belongs on Etsy or KDP.</p>
+        <div class="dsg-g">
+          <div>
+            <h4>Best-selling design</h4>
+            <p>A <strong>circular ornament artwork</strong>: a couple under mistletoe in warm minimal line art inside a eucalyptus-and-pine ring, "OUR FIRST CHRISTMAS" curved above, names and 2026 curved below in a fine serif.</p>
+            <h4>Why it sells</h4>
+            <p>The circular format fits ceramic ornaments, acrylic plaques and suncatchers with one file, and personalization adds a 30–50% premium to the identical unpersonalized item. This is the one niche where a $19 ornament beats a $34 sweatshirt.</p>
+            <h4>Listing title</h4>
+            <p class="dsg-t">Our First Christmas Ornament 2026, Personalized Couple Ornament, First Christmas Married Keepsake, Custom Name Ceramic Ornament Gift</p>
+          </div>
+          <div class="dsg-p">
+            <h4>Prompt <button data-copy="#p12">Copy</button></h4>
+            <pre id="p12">Circular keepsake artwork for a ceramic Christmas ornament. A couple standing under mistletoe, drawn as warm minimal line-art silhouettes with soft watercolor washes, inside a round wreath of eucalyptus and pine. Text OUR FIRST CHRISTMAS curved above and blank space for two names plus 2026 curved below in a fine serif. Palette: soft sage, cream, dusty rose, antique gold. Even round composition with a clear margin near the ornament rim, flat print-ready art, no mockup, no photo, no extra text. --ar 1:1</pre>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="small" style="margin-top:18px;font-size:12.8px;color:var(--muted)">
+      All twelve prompts are also in <a class="link-secondary" href="christmas-2026-design-prompts.txt" download>christmas-2026-design-prompts.txt</a> for bulk copy-paste.
+    </p>
   </div>
 </section>
 
